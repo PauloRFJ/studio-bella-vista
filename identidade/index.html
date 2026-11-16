@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Identidade visual · Studio Bella Vista | MeKa Studio</title>
+<meta name="description" content="Identidade visual de Studio Bella Vista criada pelo MeKa Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root { color-scheme: light; --bg:#FAF6EE; --ink:#2E1F17; --soft:#6B5546; --line:#E6DCCB; --accent:#4B3226; --on:#FAF6EE; --card:#FFFFFF; padding-top: env(safe-area-inset-top,0px); }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:400 1.0625rem/1.65 'Manrope', system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+.wrap { width:min(1200px, 100% - 2*clamp(1.25rem,4vw,3rem)); margin-inline:auto; }
+header { display:flex; align-items:center; gap:1rem; min-height:72px; border-bottom:1px solid var(--line); }
+header a.back { margin-right:auto; display:inline-flex; align-items:center; gap:.5rem; min-height:44px; color:var(--ink); text-decoration:none; font-weight:700; }
+.lang { display:inline-flex; padding:3px; border-radius:999px; border:1px solid var(--line); background:var(--card); }
+.lang button { min-width:46px; min-height:44px; border:0; border-radius:999px; background:none; color:var(--soft); font:700 .8rem/1 'Manrope', system-ui, sans-serif; cursor:pointer; }
+.lang button[aria-pressed="true"] { background:var(--accent); color:var(--on); }
+.intro { padding-block: clamp(3rem,7vw,6rem) clamp(2rem,4vw,3rem); max-width: 52rem; }
+.tag { font-size:.8rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--soft); }
+h1 { font-family:'Fraunces', Georgia, serif;  font-weight:700; font-size:clamp(2.4rem,1.4rem + 4vw,4.6rem); line-height:1.02; letter-spacing:-.02em; margin:.8rem 0 1rem; text-wrap:balance; }
+.intro p { color:var(--soft); font-size:1.15rem; max-width:44ch; margin:0; }
+.btn { display:inline-flex; align-items:center; min-height:52px; padding:0 1.5rem; border-radius:999px; background:var(--accent); color:var(--on); font-weight:700; text-decoration:none; margin-top:1.6rem; }
+.grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:clamp(.8rem,1.6vw,1.4rem); padding-bottom:clamp(3rem,7vw,6rem); }
+figure { margin:0; background:var(--card); border:1px solid var(--line); border-radius:22px; overflow:hidden; }
+figure.wide { grid-column: span 2; }
+figure img { display:block; width:100%; height:auto; }
+figcaption { padding:.8rem 1.1rem; font-weight:700; font-size:.95rem; border-top:1px solid var(--line); }
+footer { border-top:1px solid var(--line); padding-block:2rem; color:var(--soft); font-size:.92rem; }
+footer a { color:inherit; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:3px; border-radius:8px; }
+@media (max-width:700px) { .grid { grid-template-columns:minmax(0,1fr); } figure.wide { grid-column:auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="https://paulorfj.github.io/#projetos" data-pt="← Voltar ao portfólio" data-en="← Back to portfolio">← Voltar ao portfólio</a>
+    <div class="lang" role="group" aria-label="Idioma"><button type="button" data-lang="pt" aria-pressed="true">PT</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+  </header>
+  <section class="intro">
+    <span class="tag" data-pt="Projeto conceito · Salão de beleza" data-en="Concept project · Hair salon">Projeto conceito · Salão de beleza</span>
+    <h1><span data-pt="Identidade visual" data-en="Brand identity">Identidade visual</span> · Studio Bella Vista</h1>
+    <p data-pt="Duas mechas douradas que se encontram formando o V de Vista, com a elegância do cacau e do creme." data-en="Two golden strands that meet to form the V in Vista, with the elegance of cocoa and cream.">Duas mechas douradas que se encontram formando o V de Vista, com a elegância do cacau e do creme.</p>
+    <a class="btn" href="../" data-pt="Ver o site" data-en="View the website">Ver o site</a>
+  </section>
+  <main class="grid">
+      <figure class="wide"><img src="img/main.webp" width="1920" height="1080" decoding="async" alt="Logo principal" data-pt="Logo principal" data-en="Main logo"><figcaption data-pt="Logo principal" data-en="Main logo">Logo principal</figcaption></figure>
+      <figure class="wide"><img src="img/escuro.webp" width="1920" height="1080" decoding="async" alt="Versão sobre fundo escuro" data-pt="Versão sobre fundo escuro" data-en="Dark background version"><figcaption data-pt="Versão sobre fundo escuro" data-en="Dark background version">Versão sobre fundo escuro</figcaption></figure>
+      <figure><img src="img/vertical.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Versão vertical" data-pt="Versão vertical" data-en="Stacked version"><figcaption data-pt="Versão vertical" data-en="Stacked version">Versão vertical</figcaption></figure>
+      <figure><img src="img/monograma.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Símbolo para perfil e favicon" data-pt="Símbolo para perfil e favicon" data-en="Profile and favicon symbol"><figcaption data-pt="Símbolo para perfil e favicon" data-en="Profile and favicon symbol">Símbolo para perfil e favicon</figcaption></figure>
+      <figure><img src="img/guia.webp" width="1520" height="1080" loading="lazy" decoding="async" alt="Cores e tipografia" data-pt="Cores e tipografia" data-en="Colors and typography"><figcaption data-pt="Cores e tipografia" data-en="Colors and typography">Cores e tipografia</figcaption></figure>
+  </main>
+  <footer><a href="https://paulorfj.github.io/" data-pt="Identidade e site criados pelo MeKa Studio" data-en="Branding and website by MeKa Studio">Identidade e site criados pelo MeKa Studio</a></footer>
+</div>
+<script>
+function aplicar(l) {
+  document.documentElement.lang = l === "en" ? "en" : "pt-BR";
+  document.querySelectorAll("[data-pt]").forEach(e => { const v = e.dataset[l]; if (e.tagName === "IMG") e.alt = v; else e.textContent = v; });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
+  try { localStorage.setItem("meka-lang", l); } catch (e) {}
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => aplicar(b.dataset.lang)));
+let l = ""; try { l = localStorage.getItem("meka-lang") || ""; } catch (e) {}
+if (l !== "pt" && l !== "en") l = (navigator.language || "pt").toLowerCase().startsWith("pt") ? "pt" : "en";
+aplicar(l);
+</script>
+</body>
+</html>
