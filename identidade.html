@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Bella Vista | Identidade visual</title>
+<meta name="description" content="Logos, cores e tipografia da Studio Bella Vista, com arquivos para baixar em SVG e PNG.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAF6EE">
+<link rel="icon" type="image/svg+xml" href="logos/bv-favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,350;1,9..144,400&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Fonte da MeKa Studio, carregada só com as letras do crédito -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&text=MeKaStudioIdentidadepor&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #FAF6EE; --surface: #FFFFFF; --ink: #2E1F17; --soft: #6B5546; --line: #E6DACA;
+  --accent: #4B3226; --accent-ink: #7E5A1C; --on-accent: #FAF6EE;
+  --display: 'Fraunces', Georgia, serif; --body: 'Manrope', system-ui, sans-serif;
+  --wrap: min(1120px, 100% - 2 * clamp(1rem, 4vw, 2.5rem));
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 3px; border-radius: 8px; }
+.wrap { width: var(--wrap); margin-inline: auto; }
+h1, h2 { font-family: var(--display); font-weight:350;letter-spacing:-.015em; line-height: 1.05; margin: 0; text-wrap: balance; }
+header { padding-block: clamp(1.25rem, 3vw, 2rem); border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+header img { height: 44px; width: auto; }
+.back { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; }
+.intro { padding-block: clamp(2.5rem, 7vw, 5rem) clamp(1.5rem, 4vw, 2.5rem); }
+.intro small { display: block; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; color: var(--accent-ink); margin-bottom: .9rem; }
+.intro h1 { font-size: clamp(2.4rem, 1.4rem + 4.5vw, 4.6rem); }
+.intro p { margin: 1rem 0 0; max-width: 46ch; font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); color: var(--soft); }
+section { padding-block: clamp(1.5rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); margin-bottom: 1.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1rem; }
+.card { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+.card { min-width: 0; }
+.card__art { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+.card__art--line { border-bottom: 1px solid var(--line); }
+.card__art img { position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: contain; }
+.card__art--icon img { inset: 22% 0; width: 100%; height: 56%; }
+.card__art--icon img { filter: drop-shadow(0 10px 14px rgba(0,0,0,.18)); }
+figcaption { padding: 1rem 1.1rem 1.1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; }
+figcaption strong { display: block; }
+figcaption span { font-size: .9rem; color: var(--soft); }
+.dl { display: flex; gap: .4rem; }
+.dl a { display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; padding: 0 .85rem; border-radius: 999px; border: 1px solid var(--line); font-size: .85rem; font-weight: 700; text-decoration: none; }
+.dl a:hover { border-color: var(--accent-ink); color: var(--accent-ink); }
+.dl svg { width: 16px; height: 16px; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: 1rem; }
+.list li { display: flex; flex-direction: column; gap: .2rem; }
+.list strong { margin-top: .5rem; }
+.list li > span:last-child { font-size: .9rem; color: var(--soft); }
+.sw { display: flex; align-items: flex-end; height: 110px; padding: .7rem .8rem; border-radius: 16px; border: 1px solid var(--line); font-size: .85rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.aa { font-size: 4rem; line-height: 1; color: var(--accent); }
+footer { margin-top: clamp(2rem, 5vw, 3.5rem); padding-block: 2rem; border-top: 1px solid var(--line); font-size: .9rem; color: var(--soft); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; }
+/* Crédito MeKa Studio (padrão dos sites; página sempre clara: versão monocromática) */
+.credit { --mk-ink: #0E1014; --mk-k: #0E1014; --mk-sub: #4A4E57; flex-basis: 100%; border-top: 1px solid var(--line); padding-top: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.credit .credit__link { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; text-decoration: none; font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif; font-weight: 400; color: var(--mk-ink); }
+.credit .credit__by { font-size: .8rem; font-weight: 500; color: var(--mk-sub); }
+.credit .credit__mark { width: 34px; height: 26px; flex: none; overflow: visible; }
+.credit .credit__mark .k { stroke: var(--mk-k); stroke-dasharray: 70; stroke-dashoffset: 0; }
+.credit .credit__rule { display: block; width: 1.5px; height: 24px; background: color-mix(in srgb, var(--mk-sub) 45%, transparent); }
+.credit .credit__name { display: flex; flex-direction: column; line-height: .95; }
+.credit .credit__name b { font-size: 1.2rem; font-weight: 700; letter-spacing: -.035em; }
+.credit .credit__name b span { color: var(--mk-k); }
+.credit .credit__name small { font-size: .72rem; font-weight: 500; letter-spacing: -.02em; color: var(--mk-sub); }
+@media (prefers-reduced-motion: no-preference) {
+  .credit .credit__link:hover .k, .credit .credit__link:focus-visible .k { animation: mkDraw .7s cubic-bezier(.22, 1, .36, 1); }
+  .credit .credit__mark { transition: transform .3s cubic-bezier(.22, 1, .36, 1); }
+  .credit .credit__link:hover .credit__mark { transform: translateY(-1px); }
+}
+@keyframes mkDraw { from { stroke-dashoffset: 70; } to { stroke-dashoffset: 0; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="index.html" aria-label="Studio Bella Vista, abrir o site"><img src="logos/bv-logo.svg" alt="Studio Bella Vista"></a>
+    <a class="back" href="index.html">Ver o site</a>
+  </div>
+</header>
+<main>
+  <div class="wrap intro">
+    <small>Identidade visual</small>
+    <h1>Studio Bella Vista</h1>
+    <p>Mechas douradas que se encontram e formam a letra V, a especialidade da casa em forma de símbolo.</p>
+  </div>
+  <section class="wrap" aria-labelledby="t-logos">
+    <h2 id="t-logos">Logos</h2>
+    <div class="grid">
+      <figure class="card">
+        <div class="card__art card__art--line" style="background:#FAF6EE"><img src="logos/bv-logo.svg" alt="Logo principal da Studio Bella Vista" loading="lazy"></div>
+        <figcaption>
+          <div><strong>Logo principal</strong><span>Para fundos claros</span></div>
+          <div class="dl"><a href="logos/bv-logo.svg" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SVG</a><a href="logos/bv-logo.png" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PNG</a></div>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__art" style="background:#4B3226"><img src="logos/bv-logo-escuro.svg" alt="Logo sobre cacau da Studio Bella Vista" loading="lazy"></div>
+        <figcaption>
+          <div><strong>Logo sobre cacau</strong><span>Para fundos escuros</span></div>
+          <div class="dl"><a href="logos/bv-logo-escuro.svg" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SVG</a><a href="logos/bv-logo-escuro.png" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PNG</a></div>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__art card__art--line" style="background:#FAF6EE"><img src="logos/bv-vertical.svg" alt="Versão vertical da Studio Bella Vista" loading="lazy"></div>
+        <figcaption>
+          <div><strong>Versão vertical</strong><span>Para espaços estreitos e quadrados</span></div>
+          <div class="dl"><a href="logos/bv-vertical.svg" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SVG</a><a href="logos/bv-vertical.png" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PNG</a></div>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__art card__art--line" style="background:#FAF6EE"><img src="logos/bv-simbolo.svg" alt="Símbolo da Studio Bella Vista" loading="lazy"></div>
+        <figcaption>
+          <div><strong>Símbolo</strong><span>Quando o nome já aparece por perto</span></div>
+          <div class="dl"><a href="logos/bv-simbolo.svg" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SVG</a><a href="logos/bv-simbolo.png" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PNG</a></div>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__art card__art--icon" style="background:#EADFCC"><img src="logos/bv-perfil.svg" alt="Foto de perfil da Studio Bella Vista" loading="lazy"></div>
+        <figcaption>
+          <div><strong>Foto de perfil</strong><span>Instagram e WhatsApp · 1080 px</span></div>
+          <div class="dl"><a href="logos/bv-perfil.svg" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SVG</a><a href="logos/bv-perfil.png" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PNG</a></div>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__art card__art--icon" style="background:#EADFCC"><img src="logos/bv-favicon.svg" alt="Favicon da Studio Bella Vista" loading="lazy"></div>
+        <figcaption>
+          <div><strong>Favicon</strong><span>Ícone do site · 32, 180 e 512 px</span></div>
+          <div class="dl"><a href="logos/bv-favicon.svg" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SVG</a><a href="logos/bv-favicon-512.png" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>PNG</a></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="wrap" aria-labelledby="t-cores">
+    <h2 id="t-cores">Cores</h2>
+    <ul class="list">
+      <li><span class="sw" style="background:#4B3226;color:#FFFFFF">#4B3226</span><strong>Cacau</strong><span>Textos, botões e fundos escuros</span></li>
+      <li><span class="sw" style="background:#D4A95E;color:#16181C">#D4A95E</span><strong>Dourado mel</strong><span>Símbolo e detalhes</span></li>
+      <li><span class="sw" style="background:#EADFCC;color:#16181C">#EADFCC</span><strong>Areia</strong><span>Blocos e cartões</span></li>
+      <li><span class="sw" style="background:#FAF6EE;color:#16181C">#FAF6EE</span><strong>Creme</strong><span>Fundo</span></li>
+    </ul>
+  </section>
+  <section class="wrap" aria-labelledby="t-tipos">
+    <h2 id="t-tipos">Tipografia</h2>
+    <ul class="list">
+      <li><span class="aa" style="font-family:'Fraunces', serif;font-weight:350">Aa</span><strong>Fraunces</strong><span>Títulos e logo, itálico nos destaques</span></li>
+      <li><span class="aa" style="font-family:'Manrope', sans-serif;font-weight:600">Aa</span><strong>Manrope</strong><span>Textos, botões e a palavra STUDIO</span></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Os arquivos SVG têm os textos em contornos e abrem iguais em qualquer programa.</span>
+    <div class="credit">
+      <span>© <span class="mk-ano">2026</span> Studio Bella Vista</span>
+      <a class="credit__link" href="../" target="_blank" rel="noopener" aria-label="Identidade visual feita pela MeKa Studio. Abre o site do estúdio em nova aba">
+        <span class="credit__by" aria-hidden="true">Identidade por</span>
+        <svg class="credit__mark" viewBox="0 0 132 100" aria-hidden="true">
+          <polyline points="12,90 12,10 42,56 72,10 72,90" fill="none" stroke="currentColor" stroke-width="13" stroke-linejoin="miter" stroke-miterlimit="10"/>
+          <line class="k" x1="118" y1="10" x2="74" y2="54" stroke-width="13"/>
+          <line class="k" x1="92" y1="36" x2="120" y2="90" stroke-width="13"/>
+        </svg>
+        <span class="credit__rule" aria-hidden="true"></span>
+        <span class="credit__name" aria-hidden="true"><b>Me<span>K</span>a</b><small>Studio</small></span>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll(".mk-ano").forEach(e => e.textContent = new Date().getFullYear());</script>
+</body>
+</html>

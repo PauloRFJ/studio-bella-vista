@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Studio Bella Vista | Salão de Beleza no Centro de Palhoça</title>
+<meta name="robots" content="noindex">
 <meta name="description" content="Salão com hora marcada e sem espera no Centro de Palhoça. Especialistas em loiros e mechas. Serviços a partir de R$30. Agende pelo WhatsApp.">
 <meta property="og:title" content="Studio Bella Vista | Salão de Beleza no Centro de Palhoça">
 <meta property="og:description" content="Hora marcada, sem espera. Especialistas em loiros e mechas no Centro de Palhoça.">
@@ -11,36 +12,15 @@
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#FAF6EE" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1F1814" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="logos/bv-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="logos/bv-favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="logos/bv-favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<!-- Fonte da MeKa Studio, carregada só com as letras do crédito -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&text=MeKaStudioSiteporby&display=swap" rel="stylesheet">
 
-<!-- SEO local: dados FICTÍCIOS – substituir pelos reais do cliente -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HairSalon",
-  "name": "Studio Bella Vista",
-  "telephone": "+55-48-99999-0000",
-  "priceRange": "A partir de R$30",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua das Flores, 120",
-    "addressLocality": "Palhoça",
-    "addressRegion": "SC",
-    "postalCode": "88131-000",
-    "addressCountry": "BR"
-  },
-  "areaServed": "Centro, Palhoça",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "09:00",
-    "closes": "19:00"
-  }],
-  "sameAs": []
-}
-</script>
 
 <style>
 /* ===== Tokens de cor (ajuste aqui) ===== */
@@ -367,7 +347,6 @@ section { padding-block: var(--space-xl); }
 .t-controls button:active { transform: scale(.94); }
 .t-controls svg { width: 20px; height: 20px; }
 .t-count { margin-left: .5rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
-.insta { margin-top: var(--space-m); }
 ::view-transition-old(depoimento) { animation: .3s var(--ease) both fade-out; }
 ::view-transition-new(depoimento) { animation: .45s var(--ease) both fade-in; }
 @keyframes fade-out { to { opacity: 0; transform: translateY(-10px); } }
@@ -410,6 +389,11 @@ section { padding-block: var(--space-xl); }
 .final .btn { margin-top: var(--space-m); }
 .final .mini-strands { position: absolute; right: -8%; bottom: -20%; width: min(520px, 70%); opacity: .35; pointer-events: none; }
 
+/* ===== Faixa de projeto conceito ===== */
+.concept { background: var(--deep); color: var(--deep-ink); font-size: .9rem; line-height: 1.5; }
+.concept .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1rem; padding-block: .55rem; }
+.concept a { color: var(--deep-gold); font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+
 /* ===== Rodapé ===== */
 .footer { padding-block: var(--space-l) calc(var(--space-l) + 70px); border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink-soft); }
 .footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
@@ -437,14 +421,54 @@ section { padding-block: var(--space-xl); }
   *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* =========================================================
+   CRÉDITO MEKA STUDIO (padrão em todos os sites)
+   Claro: versão monocromática do manual. Escuro: K em verde-limão.
+   ========================================================= */
+.credit{--mk-ink:#0E1014;--mk-k:#0E1014;--mk-sub:#4A4E57}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .credit{--mk-ink:#EDEBE6;--mk-k:#C8F542;--mk-sub:#8E939C} }
+:root[data-theme="dark"] .credit{--mk-ink:#EDEBE6;--mk-k:#C8F542;--mk-sub:#8E939C}
+.credit{grid-column:1/-1;flex-basis:100%;border-top:1px solid var(--line);padding-top:var(--space-m);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.credit__link{display:inline-flex;align-items:center;gap:.7rem;min-height:44px;text-decoration:none;font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;color:var(--mk-ink)}
+.credit__by{font-size:.8rem;font-weight:500;color:var(--mk-sub)}
+.credit__mark{width:34px;height:26px;flex:none;overflow:visible}
+.credit__mark .k{stroke:var(--mk-k);stroke-dasharray:70;stroke-dashoffset:0}
+.credit__rule{width:1.5px;height:24px;background:color-mix(in srgb,var(--mk-sub) 45%,transparent)}
+.credit__name{display:flex;flex-direction:column;line-height:.95}
+.credit__name b{font-size:1.2rem;font-weight:700;letter-spacing:-.035em}
+.credit__name b span{color:var(--mk-k)}
+.credit__name small{font-size:.72rem;font-weight:500;letter-spacing:-.02em;color:var(--mk-sub)}
+@media (prefers-reduced-motion: no-preference){
+  .credit__link:hover .k,.credit__link:focus-visible .k{animation:mkDraw .7s var(--ease-out,var(--ease,cubic-bezier(.22,1,.36,1)))}
+  .credit__link:hover .credit__mark{transform:translateY(-1px)}
+  .credit__mark{transition:transform .3s var(--ease-out,var(--ease,cubic-bezier(.22,1,.36,1)))}
+}
+@keyframes mkDraw{from{stroke-dashoffset:70}to{stroke-dashoffset:0}}
+
+/* O crédito vence os estilos genéricos de links e textos do rodapé de cada site */
+.credit .credit__link{color:var(--mk-ink);font-size:1rem;min-height:44px}
+.credit .credit__link:hover,.credit .credit__link:focus-visible{color:var(--mk-ink)}
+.credit .credit__by{display:inline;min-height:0;font-size:.8rem;color:var(--mk-sub)}
+.credit .credit__rule{display:block;min-height:0}
+.credit .credit__name{display:flex;min-height:0;color:inherit}
+.credit .credit__name b span{display:inline;min-height:0;font-size:inherit;color:var(--mk-k)}
+.credit .credit__name small{color:var(--mk-sub)}
+.credit > span, .credit > span span{display:inline;min-height:0}
+/* Aqui o crédito é a única linha do rodapé: sem segunda divisória */
+.footer .wrap > .credit:first-child{border-top:0;padding-top:0}
 </style>
 </head>
 <body>
-<div class="concept-bar" style="position:relative;z-index:70;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.3rem 1rem;padding:.55rem 1rem calc(.55rem + 0px);background:#16181C;color:#EDEBE6;font:600 .82rem/1.4 'Manrope',system-ui,sans-serif;text-align:center">
-  <span>Projeto conceito do MeKa Studio, com dados fictícios · Concept project by MeKa Studio, sample data</span>
-  <a href="https://paulorfj.github.io/#projetos" style="color:#C8F542;min-height:32px;display:inline-flex;align-items:center">← Portfólio</a>
-</div>
 <a class="skip" href="#servicos">Pular para o conteúdo</a>
+
+<!-- PROJETO CONCEITO: dados do salão fictícios; os botões de WhatsApp falam com a MeKa Studio -->
+<div class="concept" role="note">
+  <div class="wrap">
+    <span>Projeto conceito da MeKa Studio. O salão, o endereço e os depoimentos são fictícios, e os botões de WhatsApp falam com a MeKa.</span>
+    <a href="../">Conheça a MeKa Studio</a>
+  </div>
+</div>
 
 <!-- Ícone de conversa reutilizável -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -598,12 +622,12 @@ section { padding-block: var(--space-xl); }
       <div class="reasons">
         <div class="reason"><h3>Sem espera, de verdade</h3><p>Atendemos só com hora marcada. Seu horário é seu, e você não perde tempo na recepção.</p></div>
         <div class="reason"><h3>Especialistas em loiros</h3><p>Mechas e loiros são uma especialidade da casa, não só mais um serviço da lista.</p></div>
-        <div class="reason"><h3>6 anos no Centro de Palhoça</h3><p>Muitas clientes chegam por indicação de amigas, e é essa confiança que cuidamos todos os dias.</p></div>
+        <div class="reason"><h3>Indicação de amiga para amiga</h3><p>Muitas clientes chegam por indicação de amigas, e é essa confiança que cuidamos todos os dias.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- DEPOIMENTOS (FICTÍCIOS – substituir por avaliações reais) -->
+  <!-- DEPOIMENTOS ilustrativos (projeto conceito) -->
   <section class="testimonials" id="depoimentos">
     <div class="wrap t-layout">
       <div class="section-head" style="margin-bottom:0">
@@ -613,6 +637,7 @@ section { padding-block: var(--space-xl); }
           <button type="button" id="next" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <span class="t-count" id="count">1 de 3</span>
         </div>
+        <p class="disclaimer">Depoimentos ilustrativos, criados para demonstração.</p>
       </div>
       <div class="quote-box" aria-live="polite">
         <blockquote class="quote" id="quote">
@@ -635,7 +660,7 @@ section { padding-block: var(--space-xl); }
     </div>
   </section>
 
-  <!-- LOCALIZAÇÃO (CEP e link FICTÍCIOS – substituir) -->
+  <!-- LOCALIZAÇÃO fictícia (projeto conceito) -->
   <section class="visit" id="visite" style="padding-top:0">
     <div class="wrap">
       <div class="section-head" style="margin-bottom:0">
@@ -654,7 +679,6 @@ section { padding-block: var(--space-xl); }
             <dt>Domingo e segunda</dt><dd>Fechado</dd>
           </dl>
         </div>
-        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Rua+das+Flores+120+Centro+Palho%C3%A7a+SC" target="_blank" rel="noopener">Ver no mapa</a>
       </div>
     </div>
   </section>
@@ -675,8 +699,19 @@ section { padding-block: var(--space-xl); }
 
 <footer class="footer">
   <div class="wrap">
-    <span>© Studio Bella Vista, Palhoça/SC</span>
-    <span>@studiobellavista</span>
+    <div class="credit">
+      <span>© <span class="mk-ano">2026</span> Studio Bella Vista · projeto conceito</span>
+      <a class="credit__link" href="../" target="_blank" rel="noopener" aria-label="Site feito pela MeKa Studio. Abre o site do estúdio em nova aba">
+        <span class="credit__by" aria-hidden="true">Site por</span>
+        <svg class="credit__mark" viewBox="0 0 132 100" aria-hidden="true">
+          <polyline points="12,90 12,10 42,56 72,10 72,90" fill="none" stroke="currentColor" stroke-width="13" stroke-linejoin="miter" stroke-miterlimit="10"/>
+          <line class="k" x1="118" y1="10" x2="74" y2="54" stroke-width="13"/>
+          <line class="k" x1="92" y1="36" x2="120" y2="90" stroke-width="13"/>
+        </svg>
+        <span class="credit__rule" aria-hidden="true"></span>
+        <span class="credit__name" aria-hidden="true"><b>Me<span>K</span>a</b><small>Studio</small></span>
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -685,11 +720,11 @@ section { padding-block: var(--space-xl); }
 </a>
 
 <script>
-/* WhatsApp: número FICTÍCIO – substituir */
-const WHATSAPP = "5548988194919"; /* projeto conceito: os botões levam ao MeKa Studio */
+/* Projeto conceito: os botões de WhatsApp falam com a MeKa Studio */
+const WHATSAPP = "5548988194919";
 const MSG = {
-  pt: "Olá! Vi o projeto conceito Studio Bella Vista no portfólio do MeKa Studio e quero um site assim para o meu negócio.",
-  en: "Hi! I saw the Studio Bella Vista concept project in MeKa Studio’s portfolio and I’d like a website like this for my business."
+  pt: "Olá! Vi o projeto conceito Studio Bella Vista no portfólio da MeKa Studio e quero um site assim para o meu negócio.",
+  en: "Hi! I saw the Studio Bella Vista concept in MeKa Studio’s portfolio and I’d like a website like this for my business."
 };
 let LANG = "pt";
 function linksWhats() {
@@ -706,7 +741,7 @@ menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
   try { menu.hidePopover(); } catch (e) {}
 }));
 
-/* Depoimentos FICTÍCIOS – substituir por avaliações reais */
+/* Depoimentos ilustrativos (projeto conceito) */
 const depoimentos = [
   { pt: "Nunca mais esperei uma hora na recepção. Chego, sento e já começa.", en: "I never wait an hour at reception anymore. I arrive, sit down and it starts.", nome: "Juliana M." },
   { pt: "Finalmente achei quem acerta meu loiro sem deixar amarelado.", en: "I finally found someone who gets my blonde right, with no brassy tones.", nome: "Fernanda R." },
@@ -764,10 +799,10 @@ const EN = {
   "Atendemos só com hora marcada. Seu horário é seu, e você não perde tempo na recepção.": "We work by appointment only. Your time slot is yours, and you don’t waste time at reception.",
   "Especialistas em loiros": "Blonde specialists",
   "Mechas e loiros são uma especialidade da casa, não só mais um serviço da lista.": "Highlights and blonde are a house specialty, not just another item on the list.",
-  "6 anos no Centro de Palhoça": "6 years in downtown Palhoça",
+  "Indicação de amiga para amiga": "Recommended from friend to friend",
   "Muitas clientes chegam por indicação de amigas, e é essa confiança que cuidamos todos os dias.": "Many clients come recommended by friends, and that trust is what we care for every day.",
   "O que dizem nossas clientes": "What our clients say",
-  "Veja nossos trabalhos no Instagram": "See our work on Instagram",
+  "Depoimentos ilustrativos, criados para demonstração.": "Illustrative reviews, written for demonstration.",
   "Agendar é simples": "Booking is simple",
   "Chame no WhatsApp": "Message us on WhatsApp", "Um toque no botão e a conversa já abre.": "One tap on the button and the chat opens.",
   "Escolha serviço e horário": "Choose service and time", "Encontramos juntas o melhor momento para você.": "Together we find the best time for you.",
@@ -776,7 +811,12 @@ const EN = {
   "Fácil de chegar, com horário reservado esperando por você.": "Easy to reach, with your reserved time waiting for you.",
   "Endereço": "Address", "Horários": "Hours",
   "Terça a sábado": "Tuesday to Saturday", "9h às 19h": "9 am to 7 pm",
-  "Domingo e segunda": "Sunday and Monday", "Fechado": "Closed", "Ver no mapa": "View on map",
+  "Domingo e segunda": "Sunday and Monday", "Fechado": "Closed",
+  "Projeto conceito da MeKa Studio. O salão, o endereço e os depoimentos são fictícios, e os botões de WhatsApp falam com a MeKa.": "A MeKa Studio concept project. The salon, address and reviews are fictional, and the WhatsApp buttons reach MeKa.",
+  "Conheça a MeKa Studio": "Visit MeKa Studio",
+  "Site por": "Site by",
+  "Site feito pela MeKa Studio. Abre o site do estúdio em nova aba": "Website made by MeKa Studio. Opens the studio’s site in a new tab",
+  "Studio Bella Vista · projeto conceito": "Studio Bella Vista · concept project",
   "Seu próximo horário está a uma mensagem de distância.": "Your next appointment is one message away.",
   "Escolha o serviço, reserve seu horário e chegue sabendo que será atendida na hora.": "Choose your service, reserve your time and arrive knowing you’ll be seen right away.",
   /* atributos de acessibilidade */
@@ -825,5 +865,6 @@ try { inicial = localStorage.getItem("bv-lang") || ""; } catch (e) {}
 if (inicial !== "pt" && inicial !== "en") inicial = (navigator.language || "pt").toLowerCase().startsWith("pt") ? "pt" : "en";
 aplicar(inicial);
 </script>
+<script>document.querySelectorAll(".mk-ano").forEach(e => e.textContent = new Date().getFullYear());</script>
 </body>
 </html>
